@@ -1,74 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="NL-be">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deelopdracht 3</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS for any additional styling or overrides -->
-  <link rel="stylesheet" href="css/custom-bootstrap-overrides.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/icons/portfolio.webp" type="image/x-icon" />
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #141617;
+            --secondary-color: #3D729D;
+            --detail-color: #5EA0BD;
+            --font-color: #f1f2ee;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--font-color);
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+        }
+
+        header h1 {
+            font-size: 1rem;
+            color: var(--font-color);
+        }
+
+        header nav a {
+            color: var(--font-color);
+        }
+
+        header img {
+            width: 20px;
+            height: 20px;
+        }
+
+        main h1 {
+            color: var(--detail-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+        }
+
+        footer a {
+            color: var(--font-color);
+        }
+
+        .btn-primary {
+            background-color: var(--detail-color);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .service-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3rem; 
+            margin-bottom: 20px;
+        }
+
+        .service-card h2 {
+            margin-bottom: 15px;
+            color: var(--detail-color);
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .skills-icon {
+            font-size: 3rem;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skills-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills-row .col-md-3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .thumb-img {
+            width: 100%;
+            max-width: 50px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: 1rem;
+            margin-right: auto;
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/d59bc2ea1d.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-dark text-light">
 
-  <!-- Header with Bootstrap Navbar -->
-  <header class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <div class="container">
-      <a class="navbar-brand" href="#">Deelopdracht</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projecten.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
+<body>
+    <header>
+        <article class="container d-flex justify-content-between align-items-center">
+            <article class="d-flex justify-content align-items-center" >
+                <h1 class="mb-0">Rayaan <span style="color: var(--detail-color);">El Mourabet</span></h1>
+                <img src="./assets/images/duim.webp" alt="Thumb image" class="thumb-img" />
+            </article>
+            <nav>
+                <a href="/index.html#aboutme" class="text-decoration-none me-3">Over</a>
+                <a href="/index.html#myservices" class="text-decoration-none me-3">Diensten</a>
+                <a href="/index.html#myskills" class="text-decoration-none me-3">Skills</a>
+                <a href="/projecten.html" class="text-decoration-none me-3">Projecten</a>
+                <a href="/contact.html" class="text-decoration-none">Contact</a>
+            </nav>
+            <article class="d-flex">
+                <img src="./assets/icons/english.webp" alt="englishflag" class="me-2" />
+                <img src="./assets/icons/dutch.webp" alt="dutchflag" />
+            </article>
+        </article>
+    </header>
 
-  <!-- Main Content Area -->
-  <main class="container my-5">
-    <div class="row">
-      <!-- Main Content Column -->
-      <div class="col-md-8">
-        <h1 class="display-4 mb-4">Welcome to Deelopdracht</h1>
-        <p class="lead">This is a sample project page designed with Bootstrap, where we showcase various elements of the project.</p>
+    <main class="container py-5">
+        <h1 class="text-center mb-5" id="aboutme">Over <span style="color: var(--secondary-color);">Mij</span></h1>
+        <article class="row">
+            <article class="col-md-6">
+                <p>Ik ben een student Systeem- en Netwerkbeheer en heb altijd een sterke interesse gehad in IT. Deze passie motiveert me om mijn kennis en vaardigheden steeds verder te ontwikkelen, zowel theoretisch als praktisch, om systemen efficiënt te beheren en problemen op te lossen. Ik zie dit als een continu leerproces, waarin ik me wil ontwikkelen tot een expert in de IT-wereld. Mijn doel is om diepgaande kennis op te bouwen en voorbereid te zijn op complexe uitdagingen, zodat ik kan bijdragen aan de voortgang van technologie en mee kan groeien met veranderingen in de sector.</p>
+            </article>
+            <article< class="col-md-6">
+                <img src="./assets/images/deco1.jpg" alt="decorative image" class="img-fluid rounded" />
+            </article>
+        </article>
 
-        <!-- Example Content Section -->
-        <section>
-          <h2>Project Highlights</h2>
-          <p>Here, we describe the main highlights of the project. Bootstrap’s grid system helps make this content responsive across devices.</p>
-          <a href="detail-1.html" class="btn btn-primary mt-3">Read More</a>
-        </section>
-      </div>
+        <h1 class="text-center mb-5" id="myservices">Mijn <span style="color: var(--secondary-color);">Diensten</span></h1>
+        <article class="row">
+            <article class="col-md-4">
+                <div class="service-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Netwerkbeheer</h2>
+                    <ul>
+                        <li>Configureren en onderhouden van netwerken</li>
+                        <li>Beveiliging en monitoring van netwerkverkeer</li>
+                        <li>Optimalisatie van netwerkprestaties</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="col-md-4">
+                <div class="service-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Serverbeheer</h2>
+                    <ul>
+                        <li>Installatie en configuratie van servers</li>
+                        <li>Back-ups en herstelbeheer</li>
+                        <li>Optimalisatie en probleemoplossing van servers</li>
+                        <li>Beveiliging van serveromgevingen</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="col-md-4">
+                <div class="service-card">
+                    <i class="fa-solid fa-shield-alt"></i>
+                    <h2>Beveiliging en gegevensbescherming</h2>
+                    <ul>
+                        <li>Implementatie van firewall- en antivirusoplossingen</li>
+                        <li>Beheer van gebruikersrechten en toegang</li>
+                        <li>Gegevensbescherming en naleving van beveiligingsnormen</li>
+                        <li>Bewaking en rapportage van beveiligingsincidenten</li>
+                    </ul>
+                </div>
+            </article>
+        </article>
+        <br><br>
+        <h1 class="text-center mb-5" id="myskills">Mijn <span style="color: var(--secondary-color);">Skills</span></h1>
+        <article class="skills-row">
+            <article class="col-md-3">
+                <i class="fa-solid fa-network-wired skills-icon" title="Netwerkbeheer"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-server skills-icon" title="Serverbeheer"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-shield-halved skills-icon" title="Beveiliging"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-database skills-icon" title="Databasebeheer"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-cloud skills-icon" title="Cloudbeheer"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-lock skills-icon" title="Gegevensbescherming"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-cogs skills-icon" title="Automatisering en Scripting"></i>
+            </article>
+            <article class="col-md-3">
+                <i class="fa-solid fa-user-shield skills-icon" title="Gebruikersbeheer"></i>
+            </article>
+        </article>
+    </main>
 
-      <!-- Sidebar or Additional Info Column -->
-      <div class="col-md-4">
-        <h2 class="h5">Quick Links</h2>
-        <ul class="list-unstyled">
-          <li><a href="detail-2.html" class="text-light">Detail Page 1</a></li>
-          <li><a href="detail-3.html" class="text-light">Detail Page 2</a></li>
-          <li><a href="detail-4.html" class="text-light">Detail Page 3</a></li>
-          <!-- Add more links as needed -->
-        </ul>
-      </div>
-    </div>
-  </main>
+    <footer class="py-4">
+        <article class="container text-center">
+            <article class="d-flex justify-content-center mb-3">
+                <a href="https://github.com/Rayaan189/" target="_blank" class="text-decoration-none me-3">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank" class="text-decoration-none">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </article>
+            <p class="mb-0">&copy; 2024 Alle Rechten Voorbehouden.</p>
+            <p>Door <span style="color: var(--detail-color);">Rayaan</span></p>
+            <a href="#top" class="text-decoration-none">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+        </article>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-secondary text-light text-center py-3">
-    <p class="mb-0">&copy; 2023 Deelopdracht. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Bootstrap JS Bundle with Popper.js for interactive components -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

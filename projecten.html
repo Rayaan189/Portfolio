@@ -1,89 +1,114 @@
 <!DOCTYPE html>
 <html lang="NL-be">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/icons/portfolio.webp" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/portfolio.webp" type="image/x-icon">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/d59bc2ea1d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header id="#top">
-        <p id="bigName">Rayaan <span>El Mourabet</span></p>
-        <nav>
-            <a href="/index.html#aboutme">Over</a>
-            <a href="/index.html#myservices">Diensten</a>
-            <a href="/index.html#myskills">Skills</a>
-            <a href="/projecten.html">Projecten</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
-        <section>
-            <img src="./assets/icons/english.webp" alt="englishflag" />
-            <img src="./assets/icons/dutch.webp" alt="dutchflag" />
-            <img src="/assets/images/logo.png" alt="logo" id="logo">
-        </section>
+    <header>
+        <article class="container d-flex justify-content-between align-items-center">
+            <article class="d-flex justify-content align-items-center" >
+                <h1 class="mb-0">Rayaan <span style="color: var(--detail-color);">El Mourabet</span></h1>
+                <img src="./assets/images/duim.webp" alt="Thumb image" class="thumb-img" />
+            </article>
+            <nav>
+                <a href="/index.html#aboutme" class="text-decoration-none me-3">Over</a>
+                <a href="/index.html#myservices" class="text-decoration-none me-3">Diensten</a>
+                <a href="/index.html#myskills" class="text-decoration-none me-3">Skills</a>
+                <a href="/projecten.html" class="text-decoration-none me-3">Projecten</a>
+                <a href="/contact.html" class="text-decoration-none">Contact</a>
+            </nav>
+            <article class="d-flex">
+                <img src="./assets/icons/english.webp" alt="englishflag" class="me-2" />
+                <img src="./assets/icons/dutch.webp" alt="dutchflag" />
+            </article>
+        </article>
     </header>
-    <main>
-        <section id="mywork">
+    <main class="container mt-4">
+        <section id="mywork" class="text-center">
             <h1>Mijn <span>Projecten</span></h1>
-            <article>
-                <a href="/detail-1.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure1">
+            <article class="row gy-3">
+                <a href="/detail-1.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/bank.webp" alt="Project Bank">
                         <figcaption>Bank</figcaption>
                     </figure>
                 </a>
-                <a href="/detail-2.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure2">
+                <a href="/detail-2.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/bib.webp" alt="Project Bibliotheek">
                         <figcaption>Bibliotheek</figcaption>
                     </figure>
                 </a>
-                <a href="/detail-3.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure3">
+                <a href="/detail-3.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/fitness.webp" alt="Project Fitness">
                         <figcaption>Fitness</figcaption>
                     </figure>
                 </a>
-                <a href="/detail-4.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure4">
+                <a href="/detail-4.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/gebouwbeheer.webp" alt="Project Gebouwbeheer">
                         <figcaption>Gebouwbeheer</figcaption>
                     </figure>
                 </a>
-                <a href="/detail-5.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure5">
+                <a href="/detail-5.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/vereniging.webp" alt="Project V.Z.W">
                         <figcaption>V.Z.W</figcaption>
                     </figure>
                 </a>
-                <a href="/detail-6.html" target="_blank">
-                    <figure class="myworkfigure myworkfigure6">
+                <a href="/detail-6.html" target="_blank" class="col-12 col-md-6 col-lg-4">
+                    <figure>
+                        <img src="./assets/images/autogarage.webp" alt="Project Auto garage">
                         <figcaption>Auto garage</figcaption>
                     </figure>
                 </a>
             </article>
         </section>
-        <section id="contactmeproj">
+
+        <section id="contactmeproj" class="mt-5 text-white">
             <h1>Contacteer <span>Mij</span></h1>
-             <article>
-                    <section class="contactemoj"><i class="fa-regular fa-envelope"></i><a href="mailto:Rayaan.elmourabet@student.ap.be">Rayaan.elmourabet@student.ap.be</a></section>
-                    <section class="contactemoj"><i class="fa-solid fa-location-dot"></i><p>België - Antwerpen</p></section>
-                    <section class="contactemoj" ><i class="fa-solid fa-mobile-screen-button"></i><a href="tel:+32 487 71 58 97">+32 487 71 58 97</a></section>
+            <article class="d-flex flex-column align-items-start">
+                <section class="contactemoj">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:Rayaan.elmourabet@student.ap.be" class="text-white">Rayaan.elmourabet@student.ap.be</a>
+                </section>
+                <section class="contactemoj">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>België - Antwerpen</p>
+                </section>
+                <section class="contactemoj">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <a href="tel:+32 487 71 58 97" class="text-white">+32 487 71 58 97</a>
+                </section>
             </article>
         </section>
-        
     </main>
-    <footer id="footerProject">
-        <article id="socials">
+
+    <footer class="mt-5">
+        <article>
             <a href="https://github.com/Rayaan189/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </article>
         <article>
             <p>&copy; 2024 Alle Rechten Voorbehouden.</p>
-            <p>Door <span>Rayaan</span></p>
+            <p>Door <span style="color: #5EA0BD;">Rayaan</span></p>
         </article>
         <article>
             <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
         </article>
-    </footer>   
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

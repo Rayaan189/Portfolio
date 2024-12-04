@@ -6,67 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/icons/portfolio.webp" type="image/x-icon" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/d59bc2ea1d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header id="#top">
-        <p id="bigName">Rayaan <span>El Mourabet</span></p>
-        <nav>
-            <a href="/index.html#aboutme">Over</a>
-            <a href="/index.html#myservices">Diensten</a>
-            <a href="/index.html#myskills">Skills</a>
-            <a href="/projecten.html">Projecten</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
-        <section>
-            <img src="./assets/icons/english.webp" alt="englishflag" />
-            <img src="./assets/icons/dutch.webp" alt="dutchflag" />
-            <img src="/assets/images/logo.png" alt="logo" id="logo">
-        </section>
+    <header>
+        <article class="container d-flex justify-content-between align-items-center">
+            <article class="d-flex justify-content align-items-center" >
+                <h1 class="mb-0">Rayaan <span style="color: var(--detail-color);">El Mourabet</span></h1>
+                <img src="./assets/images/duim.webp" alt="Thumb image" class="thumb-img" />
+            </article>
+            <nav>
+                <a href="/index.html#aboutme" class="text-decoration-none me-3">Over</a>
+                <a href="/index.html#myservices" class="text-decoration-none me-3">Diensten</a>
+                <a href="/index.html#myskills" class="text-decoration-none me-3">Skills</a>
+                <a href="/projecten.html" class="text-decoration-none me-3">Projecten</a>
+                <a href="/contact.html" class="text-decoration-none">Contact</a>
+            </nav>
+            <article class="d-flex">
+                <img src="./assets/icons/english.webp" alt="englishflag" class="me-2" />
+                <img src="./assets/icons/dutch.webp" alt="dutchflag" />
+            </article>
+        </article>
     </header>
-    <main>
-        <section id="mywork">
-            <h1>Mijn <span>Project</span></h1>
-            <section >
-                <a href="/detail-1.html" target="_blank">
-                    <img src="/assets/images/bank.webp" class="detailfoto" alt="">
+    <main class="container py-5">
+        <section class="mb-5">
+            <h1 class="text-center mb-4">Mijn <span style="color: var(--secondary-color);">Project</span></h1>
+            <article class="text-center mb-4">
+                <a class="d-inline-block">
+                    <article class="project-image"></article>
                 </a>
-            </section>
-            <section>
-                <p><span style="font-size: 2rem;">Info:</span> Dit project betreft het ontwerp en de ontwikkeling van een modulaire, slimme bank die zowel comfort als technologie biedt. De bank is uitgerust met draadloze opladers, een audio- en verlichtingssysteem dat via een smartphone-app kan worden bediend, en sensoren die de zitpositie automatisch aanpassen voor optimaal comfort. Als systeem- en netwerkbeheerder was ik verantwoordelijk voor de integratie van de technologie, waaronder het opzetten van een stabiel netwerk voor de slimme functies en het waarborgen van de beveiliging van deze systemen. Het resultaat is een innovatieve en gebruiksvriendelijke bank die moderne technologie combineert met esthetisch design.</p>
-            </section>
+            </article>
+            <p>
+                <span style="font-size: 1.5rem;">Info:</span> Dit project betreft het ontwerp en de ontwikkeling van een
+                modulaire, slimme bank die zowel comfort als technologie biedt. De bank is uitgerust met draadloze
+                opladers, een audio- en verlichtingssysteem dat via een smartphone-app kan worden bediend, en sensoren
+                die de zitpositie automatisch aanpassen voor optimaal comfort. Als systeem- en netwerkbeheerder was ik
+                verantwoordelijk voor de integratie van de technologie, waaronder het opzetten van een stabiel netwerk
+                voor de slimme functies en het waarborgen van de beveiliging van deze systemen. Het resultaat is een
+                innovatieve en gebruiksvriendelijke bank die moderne technologie combineert met esthetisch design.
+            </p>
         </section>
-        <section id="contactmeproj">
-            <h1>Contacteer <span>Mij</span></h1>
-            <article>
-                <section class="contactemoj"><i class="fa-regular fa-envelope"></i><a
-                        href="mailto:Rayaan.elmourabet@student.ap.be">Rayaan.elmourabet@student.ap.be</a></section>
-                <section class="contactemoj"><i class="fa-solid fa-location-dot"></i>
+        <section class="text-center">
+            <h1 class="mb-4">Contacteer <span style="color: var(--detail-color);">Mij</span></h1>
+            <article class="row justify-content-center">
+                <article class="col-md-4 mb-3">
+                    <i class="fa-regular fa-envelope fs-4"></i>
+                    <p><a href="mailto:Rayaan.elmourabet@student.ap.be" class="text-decoration-none text-light">Rayaan.elmourabet@student.ap.be</a></p>
+                </article>
+                <article class="col-md-4 mb-3">
+                    <i class="fa-solid fa-location-dot fs-4"></i>
                     <p>België - Antwerpen</p>
-                </section>
-                <section class="contactemoj"><i class="fa-solid fa-mobile-screen-button"></i><a
-                        href="tel:+32 487 71 58 97">+32 487 71 58 97</a></section>
+                </article>
+                <article class="col-md-4 mb-3">
+                    <i class="fa-solid fa-mobile-screen-button fs-4"></i>
+                    <p><a href="tel:+32487715897" class="text-decoration-none text-light">+32 487 71 58 97</a></p>
+                </article>
             </article>
         </section>
-
     </main>
-    <footer id="footerProject">
-        <article id="socials">
-            <a href="https://github.com/Rayaan189/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank"><i
-                    class="fa-brands fa-linkedin"></i></a>
-        </article>
-        <article>
-            <p>&copy; 2024 Alle Rechten Voorbehouden.</p>
-            <p>Door <span>Rayaan</span></p>
-        </article>
-        <article>
-            <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
+    <footer class="py-4">
+        <article class="container text-center">
+            <article class="d-flex justify-content-center mb-3">
+                <a href="https://github.com/Rayaan189/" target="_blank" class="text-decoration-none me-3">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank" class="text-decoration-none">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </article>
+            <p class="mb-0">&copy; 2024 Alle Rechten Voorbehouden.</p>
+            <p>Door <span style="color: var(--detail-color);">Rayaan</span></p>
+            <a href="#top" class="text-decoration-none">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
         </article>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

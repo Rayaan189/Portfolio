@@ -1,62 +1,97 @@
 <!DOCTYPE html>
 <html lang="NL-be">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/icons/portfolio.webp" type="image/x-icon" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/d59bc2ea1d.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header id="#top">
-        <p id="bigName">Rayaan <span>El Mourabet</span></p>
+<header>
+    <article class="container d-flex justify-content-between align-items-center">
+        <article class="d-flex justify-content align-items-center" >
+            <h1 class="mb-0">Rayaan <span style="color: var(--detail-color);">El Mourabet</span></h1>
+            <img src="./assets/images/duim.webp" alt="Thumb image" class="thumb-img" />
+        </article>
         <nav>
-            <a href="/index.html#aboutme">Over</a>
-            <a href="/index.html#myservices">Diensten</a>
-            <a href="/index.html#myskills">Skills</a>
-            <a href="/projecten.html">Projecten</a>
-            <a href="/contact.html">Contact</a>
+            <a href="/index.html#aboutme" class="text-decoration-none me-3">Over</a>
+            <a href="/index.html#myservices" class="text-decoration-none me-3">Diensten</a>
+            <a href="/index.html#myskills" class="text-decoration-none me-3">Skills</a>
+            <a href="/projecten.html" class="text-decoration-none me-3">Projecten</a>
+            <a href="/contact.html" class="text-decoration-none">Contact</a>
         </nav>
-        <section>
-            <img src="./assets/icons/english.webp" alt="englishflag" />
+        <article class="d-flex">
+            <img src="./assets/icons/english.webp" alt="englishflag" class="me-2" />
             <img src="./assets/icons/dutch.webp" alt="dutchflag" />
-            <img src="/assets/images/logo.png" alt="logo" id="logo">
-        </section>
-    </header>
-    <main id="maincontact">
-        <h1>Contacteer <span>Me</span></h1>
-        <section id="formAndMap">
-            <form action="#" id="contactForm">
-                <label for="name">Naam:</label>
-                <input type="text" name="name" id="name" placeholder="Naam:" >
-                <label for="mail">Mail:</label>
-                <input type="text" name="mail" id="mail" placeholder="E-mail:">
-                <label for="text">Vraag:</label>
-                <textarea name="text" id="text" cols="30" rows="10" placeholder="Bericht:"></textarea><br>
-                <button class="Button" id="submitButton">Verzenden     <i class="fa-regular fa-paper-plane" id="submitButton"></i></button>
-            </form>
-            <img src="/assets/images/map.jpeg" id="map" alt="map">
-        </section>
-        <article id="contactmeContactPage">
-            <section class="contactemoj"><i class="fa-regular fa-envelope"></i><a href="mailto:Rayaan.elmourabet@student.ap.be">Rayaan.elmourabet@student.ap.be</a></section>
-            <section class="contactemoj"><i class="fa-solid fa-location-dot"></i><p>België - Antwerpen</p></section>
-            <section class="contactemoj" ><i class="fa-solid fa-mobile-screen-button"></i><a href="tel:+32 487 71 58 97">+32 487 71 58 97</a></section>
+        </article>
+    </article>
+</header>
+    <main class="container py-5">
+        <h1 class="text-center mb-5">Contacteer <span style="color: var(--secondary-color);">Me</span></h1>
+        <article class="row">
+            <article class="col-md-6">
+                <form action="#">
+                    <article class="mb-3">
+                        <label for="name" class="form-label">Naam:</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Naam:" />
+                    </article>
+                    <article class="mb-3">
+                        <label for="mail" class="form-label">Mail:</label>
+                        <input type="email" name="mail" id="mail" class="form-control" placeholder="E-mail:" />
+                    </article>
+                    <article class="mb-3">
+                        <label for="text" class="form-label">Vraag:</label>
+                        <textarea name="text" id="text" class="form-control" rows="5" placeholder="Bericht:"></textarea>
+                    </article>
+                    <button type="submit" class="btn btn-primary w-100">
+                        Verzenden <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </form>
+            </article>
+            <article class="col-md-6">
+                <img src="/assets/images/map.jpeg" alt="map" class="img-fluid rounded" />
+            </article>
+        </article>
+
+        <article class="row mt-5">
+            <article class="col-md-4 text-center">
+                <i class="fa-regular fa-envelope fs-4"></i>
+                <p><a href="mailto:Rayaan.elmourabet@student.ap.be" class="text-decoration-none text-light">Rayaan.elmourabet@student.ap.be</a></p>
+            </article>
+            <article class="col-md-4 text-center">
+                <i class="fa-solid fa-location-dot fs-4"></i>
+                <p>België - Antwerpen</p>
+            </article>
+            <article class="col-md-4 text-center">
+                <i class="fa-solid fa-mobile-screen-button fs-4"></i>
+                <p><a href="tel:+32487715897" class="text-decoration-none text-light">+32 487 71 58 97</a></p>
+            </article>
         </article>
     </main>
-    <footer>
-        <article id="socials">
-            <a href="https://github.com/Rayaan189/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+    <footer class="py-4">
+        <article class="container text-center">
+            <article class="d-flex justify-content-center mb-3">
+                <a href="https://github.com/Rayaan189/" target="_blank" class="text-decoration-none me-3">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank" class="text-decoration-none">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </article>
+            <p class="mb-0">&copy; 2024 Alle Rechten Voorbehouden.</p>
+            <p>Door <span style="color: var(--detail-color);">Rayaan</span></p>
+            <a href="#top" class="text-decoration-none">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
         </article>
-        <article>
-            <p>&copy; 2024 Alle Rechten Voorbehouden.</p>
-            <p>Door <span>Rayaan</span></p>
-        </article>
-        <article>
-            <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
-        </article>
-    </footer>   
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
