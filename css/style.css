@@ -29,16 +29,51 @@ header img {
   height: 20px;
 }
 
+header p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
 main h1 {
   color: var(--detail-color);
 }
 
+nav a {
+  color: #f8f9fa;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+h1 {
+  color: #5EA0BD;
+}
+
 footer {
   background-color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem 0;
 }
 
 footer a {
   color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  padding-bottom: 5px;
+}
+
+#map {
+  height: 300px;
+  border-radius: 10px;
+  width: 50%;
+  top: 2rem;
+  left: 4rem;
 }
 
 .btn-primary {
@@ -68,13 +103,18 @@ footer a {
 }
 
 .service-card i {
-  font-size: 3rem; 
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .service-card h2 {
   margin-bottom: 15px;
   color: var(--detail-color);
+}
+
+.lands-logo>img {
+  height: 2rem;
+  width: 2rem;
 }
 
 .service-card ul {
@@ -121,23 +161,6 @@ footer a {
   margin-top: 1rem;
 }
 
-header p {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
-  color: #fff;
-}
-
-nav a {
-  color: #f8f9fa;
-  margin-right: 1rem;
-  text-decoration: none;
-}
-
-h1 {
-  color: #5EA0BD;
-}
-
 #mywork figure {
   text-align: center;
   margin: 1rem 0;
@@ -149,7 +172,7 @@ h1 {
 
 #mywork figure img {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
   display: block;
   border-radius: 10px;
@@ -181,25 +204,17 @@ h1 {
   color: #5EA0BD;
 }
 
-footer {
-  background-color: #3D729D;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-footer a {
-  color: #f8f9fa;
-  margin: 0 0.5rem;
-}
-
 .project-image {
   background: url("../assets/images/autogarage.webp") no-repeat center center;
   background-size: cover;
   width: 300px;
   height: 300px;
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 770px) {
+#map {
+  width: 100%;
+  left: 0;
+}
 }

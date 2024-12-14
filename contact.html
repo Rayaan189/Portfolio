@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="NL-be">
+<html lang="nl-BE">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,10 +10,42 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/d59bc2ea1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var map = L.map("map", { scrollWheelZoom: false }).setView(
+                [51.23019958123216, 4.414211125384337],
+                13
+            );
+            L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+                    maxZoom: 19,
+                    attribution:
+                        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                }
+            ).addTo(map);
+            var greenIcon = L.icon({
+                iconUrl: "./assets/icons/location-dot-solid.svg",
+
+                iconSize: [35, 35],
+            });
+
+            L.marker([51.23019958123216, 4.414211125384337], { icon: greenIcon })
+                .addTo(map)
+                .bindPopup("AP Hogeschool!")
+                .on("click", function (e) {
+                    this.openPopup();
+                });
+        });
+    </script>
 </head>
 <header>
     <article class="container d-flex justify-content-between align-items-center">
-        <article class="d-flex justify-content align-items-center" >
+        <article class="d-flex justify-content align-items-center">
             <h1 class="mb-0">Rayaan <span style="color: var(--detail-color);">El Mourabet</span></h1>
             <img src="./assets/images/duim.webp" alt="Thumb image" class="thumb-img" />
         </article>
@@ -24,79 +56,82 @@
             <a href="/projecten.html" class="text-decoration-none me-3">Projecten</a>
             <a href="/contact.html" class="text-decoration-none">Contact</a>
         </nav>
-        <article class="d-flex">
-            <img src="./assets/icons/english.webp" alt="englishflag" class="me-2" />
+        <article class="d-flex lands-logo">
+            <img src="./assets/icons/english.webp" alt="englishflag" />
             <img src="./assets/icons/dutch.webp" alt="dutchflag" />
         </article>
     </article>
 </header>
-    <main class="container py-5">
-        <h1 class="text-center mb-5">Contacteer <span style="color: var(--secondary-color);">Me</span></h1>
-        <article class="row">
-            <article class="col-md-6">
-                <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-                    <div class="form-group">
-                      <label for="name">Name:</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email:</label>
-                      <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="subject">Subject:</label>
-                      <input type="text" class="form-control" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="message">Message:</label>
-                      <textarea class="form-control" rows="10" id="message" name="message" required></textarea>
-                    </div>
-                    <div class="form-group">
-                      <div data-netlify-recaptcha="true"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </article>
-            <article class="col-md-6">
-                <img src="/assets/images/map.jpeg" alt="map" class="img-fluid rounded" />
-            </article>
+<main class="container py-5">
+    <h1 class="text-center mb-5">Contacteer <span style="color: var(--secondary-color);">Me</span></h1>
+    <article class="row">
+        <article class="col-md-6">
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" rows="10" id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div data-netlify-recaptcha="true"></div>
+                </div><br>
+                <button type="submit" class="btn btn-primary w-100">
+                    Verzenden <i class="fa-regular fa-paper-plane"></i>
+                </button>
+            </form>
         </article>
-
-        <article class="row mt-5">
-            <article class="col-md-4 text-center">
-                <i class="fa-regular fa-envelope fs-4"></i>
-                <p><a href="mailto:Rayaan.elmourabet@student.ap.be" class="text-decoration-none text-light">Rayaan.elmourabet@student.ap.be</a></p>
-            </article>
-            <article class="col-md-4 text-center">
-                <i class="fa-solid fa-location-dot fs-4"></i>
-                <p>België - Antwerpen</p>
-            </article>
-            <article class="col-md-4 text-center">
-                <i class="fa-solid fa-mobile-screen-button fs-4"></i>
-                <p><a href="tel:+32487715897" class="text-decoration-none text-light">+32 487 71 58 97</a></p>
-            </article>
+        <article id="map">
         </article>
-    </main>
+    </article>
 
-    <footer class="py-4">
-        <article class="container text-center">
-            <article class="d-flex justify-content-center mb-3">
-                <a href="https://github.com/Rayaan189/" target="_blank" class="text-decoration-none me-3">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank" class="text-decoration-none">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </article>
-            <p class="mb-0">&copy; 2024 Alle Rechten Voorbehouden.</p>
-            <p>Door <span style="color: var(--detail-color);">Rayaan</span></p>
-            <a href="#top" class="text-decoration-none">
-                <i class="fa-solid fa-angles-up"></i>
+    <article class="row mt-5">
+        <article class="col-md-4 text-center">
+            <i class="fa-regular fa-envelope fs-4"></i>
+            <p><a href="mailto:Rayaan.elmourabet@student.ap.be"
+                    class="text-decoration-none text-light">Rayaan.elmourabet@student.ap.be</a></p>
+        </article>
+        <article class="col-md-4 text-center">
+            <i class="fa-solid fa-location-dot fs-4"></i>
+            <p>België - Antwerpen</p>
+        </article>
+        <article class="col-md-4 text-center">
+            <i class="fa-solid fa-mobile-screen-button fs-4"></i>
+            <p><a href="tel:+32487715897" class="text-decoration-none text-light">+32 487 71 58 97</a></p>
+        </article>
+    </article>
+</main>
+
+<footer class="py-4">
+    <article class="container text-center">
+        <article class="d-flex justify-content-center mb-3">
+            <a href="https://github.com/Rayaan189/" target="_blank" class="text-decoration-none me-3">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rayaan-el-mourabet-889090338" target="_blank"
+                class="text-decoration-none">
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </article>
-    </footer>
+        <p class="mb-0">&copy; 2024 Alle Rechten Voorbehouden.</p>
+        <p>Door <span style="color: var(--detail-color);">Rayaan</span></p>
+        <a href="#top" class="text-decoration-none">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </article>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
